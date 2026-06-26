@@ -1,95 +1,55 @@
-# Python Keylogger (Educational Project)
+````md
+<p align="center">
+  <img src="https://i.imgur.com/MQqpAwP.gif" width="500" alt="Yuki Nagato typing">
+</p>
 
-> **⚠️ Educational Purpose Only**
+<h1 align="center">Python Keylogger</h1>
+
+<p align="center">
+  <strong>Educational Cybersecurity Project</strong>
+</p>
+
+<p align="center">
+  Demonstrating keyboard event capture, TCP sockets and multithreading in Python.
+</p>
+
+<p align="center">
+  <sub>Made by <strong>Arneb</strong> • <a href="https://github.com/shwdaniel7">@shwdaniel7</a></sub>
+</p>
+
+---
+
+> [!WARNING]
+> This repository was created **exclusively for educational purposes**.
 >
-> This repository was created exclusively for educational purposes in order to study Python programming, sockets, multithreading and basic Cybersecurity concepts.
+> Its purpose is to demonstrate how keyboard event capture, TCP socket communication and multithreading work in Python.
 >
-> This project **is not intended for malicious use** and should only be executed in controlled environments or on machines that you own.
+> It is **not intended for malicious use** and should only be executed on systems you own or have explicit authorization to test.
 
 ---
 
-## 📖 About
+# 📖 About
 
-This project demonstrates, in a simplified way, how a keylogger works internally.
+This project was developed while studying Python and Cybersecurity.
 
-It was developed to practice:
+The objective is to demonstrate, in a simplified and transparent way, how a basic keylogger works internally. The implementation intentionally avoids persistence, stealth techniques, privilege escalation, antivirus evasion, obfuscation, or any other capabilities commonly associated with real-world malware.
 
-- Python
-- Multithreading
-- TCP Socket Programming
-- Keyboard Event Capture
-- Local Client-Server Communication
-
-The implementation intentionally avoids techniques commonly found in real malware, making it easier to understand and analyze.
+This repository is intended as a learning resource for understanding both offensive security concepts and the defensive mechanisms used to detect them.
 
 ---
 
-## ⚙️ How it works
+# ✨ Features
 
-The project consists of three modules.
-
-### `main.py`
-
-Responsible for starting the application.
-
-It:
-
-- Starts the TCP server in a background thread;
-- Waits for the server to initialize;
-- Starts the keyboard logger.
+- Keyboard event capture
+- Timestamp logging
+- TCP socket communication
+- Multithreaded execution
+- Temporary log storage
+- Simple HTTP response for local visualization
 
 ---
 
-### `keylogger.py`
-
-Responsible for monitoring keyboard events.
-
-For every pressed key, it:
-
-1. Detects the key using the `keyboard` library;
-2. Gets the current timestamp;
-3. Stores the event inside a temporary file;
-4. Sends the information to the local TCP server.
-
----
-
-### `server.py`
-
-Receives messages sent by the keylogger.
-
-The server:
-
-- Accepts TCP connections on `127.0.0.1:5000`;
-- Stores received events;
-- Responds to simple HTTP GET requests, allowing anyone to build their own frontend or consume the logs using a browser or any HTTP client.
-
----
-
-## 📊 Application Flow
-
-```text
-Keyboard
-    │
-    ▼
-keylogger.py
-    │
-    ├── Save to temporary file
-    │
-    └── Send via TCP Socket
-               │
-               ▼
-          server.py
-               │
-               ▼
- Temporary Log File
-               │
-               ▼
- Browser / Live Server
-```
-
----
-
-## 📁 Project Structure
+# 📂 Project Structure
 
 ```text
 .
@@ -98,12 +58,37 @@ keylogger.py
 ├── server.py
 ├── requirements.txt
 ├── LICENSE
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## 🚀 Installation
+# ⚙️ Workflow
+
+```text
+Keyboard
+    │
+    ▼
+keylogger.py
+    │
+    ├── Store event locally
+    │
+    └── Send via TCP Socket
+               │
+               ▼
+          server.py
+               │
+               ▼
+      Temporary Log File
+               │
+               ▼
+    HTTP GET Response (optional)
+```
+
+---
+
+# 🚀 Installation
 
 Clone the repository.
 
@@ -111,7 +96,7 @@ Clone the repository.
 git clone https://github.com/shwdaniel7/python-keylogger.git
 ```
 
-Install dependencies.
+Install the dependency.
 
 ```bash
 pip install -r requirements.txt
@@ -123,34 +108,9 @@ Run the project.
 python main.py
 ```
 
-The local server will be available at:
-
-```
-http://127.0.0.1:5000
-```
-
 ---
 
-## ⚠️ Limitations
-
-This project is intentionally simple and **does not represent a real-world malware**.
-
-Some intentional limitations include:
-
-- Localhost communication only (`127.0.0.1`);
-- No persistence mechanism;
-- No stealth techniques;
-- No antivirus evasion;
-- No privilege escalation;
-- No remote command execution;
-- No external data exfiltration;
-- Temporary local storage only.
-
-These limitations exist to keep the project educational and easy to understand.
-
----
-
-## 📚 Technologies
+# 📚 Technologies
 
 - Python 3
 - keyboard
@@ -161,10 +121,37 @@ These limitations exist to keep the project educational and easy to understand.
 
 ---
 
-## ⚖️ Legal Notice
+# ⚠️ Limitations
 
-This project was created exclusively for educational and research purposes.
+This project intentionally **does not** implement techniques commonly found in real-world malware.
 
-Running keyloggers on systems or devices without explicit authorization may violate local laws.
+- Localhost communication only (`127.0.0.1`)
+- No persistence
+- No privilege escalation
+- No process injection
+- No stealth techniques
+- No antivirus evasion
+- No obfuscation
+- No encryption
+- No remote C2 server
+- No external data exfiltration
 
-The author is **not responsible** for any misuse of this code.
+These limitations exist to keep the source code understandable, safe to study and focused on educational purposes.
+
+---
+
+# ⚖️ Legal Notice
+
+Running keyloggers against systems or users without explicit authorization may violate local laws.
+
+This repository is provided exclusively for educational and research purposes.
+
+The author assumes no responsibility for any misuse of this software.
+
+---
+
+<p align="center">
+  <strong>Made by arneb</strong><br>
+  <a href="https://github.com/shwdaniel7">github.com/shwdaniel7</a>
+</p>
+````
