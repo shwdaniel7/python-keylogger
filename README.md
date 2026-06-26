@@ -1,20 +1,28 @@
-````md
 <p align="center">
-  <img src="https://i.imgur.com/MQqpAwP.gif" width="500" alt="Yuki Nagato typing">
+  <img src="https://i.imgur.com/MQqpAwP.gif" width="450" alt="Yuki Nagato typing">
 </p>
 
-<h1 align="center">Python Keylogger</h1>
+<h1 align="center">Educational Python Keylogger</h1>
 
 <p align="center">
-  <strong>Educational Cybersecurity Project</strong>
-</p>
-
-<p align="center">
-  Demonstrating keyboard event capture, TCP sockets and multithreading in Python.
+  A simple Python project demonstrating keyboard event capture, TCP socket communication and multithreading.
 </p>
 
 <p align="center">
-  <sub>Made by <strong>Arneb</strong> • <a href="https://github.com/shwdaniel7">@shwdaniel7</a></sub>
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Purpose-Educational-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/shwdaniel7/python-keylogger?style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/shwdaniel7/python-keylogger?style=for-the-badge">
+  <img src="https://img.shields.io/github/repo-size/shwdaniel7/python-keylogger?style=for-the-badge">
+</p>
+
+<p align="center">
+  made by <strong>arneb</strong> • <a href="https://github.com/shwdaniel7">@shwdaniel7</a>
 </p>
 
 ---
@@ -22,30 +30,32 @@
 > [!WARNING]
 > This repository was created **exclusively for educational purposes**.
 >
-> Its purpose is to demonstrate how keyboard event capture, TCP socket communication and multithreading work in Python.
+> The goal of this project is to demonstrate how keyboard event capture, TCP socket communication and multithreading work in Python.
 >
-> It is **not intended for malicious use** and should only be executed on systems you own or have explicit authorization to test.
+> This project **is not intended for malicious use** and was intentionally developed without persistence, stealth techniques, privilege escalation, antivirus evasion or any functionality commonly associated with real-world malware.
+>
+> Please use this project only on systems you own or have explicit authorization to test.
 
 ---
 
 # 📖 About
 
-This project was developed while studying Python and Cybersecurity.
+This repository was created while studying **Python** and **Cybersecurity**.
 
-The objective is to demonstrate, in a simplified and transparent way, how a basic keylogger works internally. The implementation intentionally avoids persistence, stealth techniques, privilege escalation, antivirus evasion, obfuscation, or any other capabilities commonly associated with real-world malware.
+Instead of replicating real-world malware, this project focuses on explaining the internal logic behind a basic keylogger using clean and readable code.
 
-This repository is intended as a learning resource for understanding both offensive security concepts and the defensive mechanisms used to detect them.
+The objective is to better understand how keyboard monitoring works and how defensive solutions can identify this type of behavior.
 
 ---
 
 # ✨ Features
 
-- Keyboard event capture
-- Timestamp logging
-- TCP socket communication
-- Multithreaded execution
-- Temporary log storage
-- Simple HTTP response for local visualization
+* ⌨️ Keyboard event capture
+* 🕒 Timestamp logging
+* 🔌 TCP socket communication
+* 🧵 Multithreaded architecture
+* 📄 Temporary log storage
+* 🌐 Basic HTTP response for local visualization
 
 ---
 
@@ -64,7 +74,7 @@ This repository is intended as a learning resource for understanding both offens
 
 ---
 
-# ⚙️ Workflow
+# 🔄 Workflow
 
 ```text
 Keyboard
@@ -72,9 +82,9 @@ Keyboard
     ▼
 keylogger.py
     │
-    ├── Store event locally
+    ├── Save event to temporary file
     │
-    └── Send via TCP Socket
+    └── Send event via TCP socket
                │
                ▼
           server.py
@@ -83,26 +93,26 @@ keylogger.py
       Temporary Log File
                │
                ▼
-    HTTP GET Response (optional)
+   Local HTTP GET response (optional)
 ```
 
 ---
 
 # 🚀 Installation
 
-Clone the repository.
+Clone the repository:
 
 ```bash
 git clone https://github.com/shwdaniel7/python-keylogger.git
 ```
 
-Install the dependency.
+Install the required dependency:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the project.
+Run the project:
 
 ```bash
 python main.py
@@ -110,33 +120,33 @@ python main.py
 
 ---
 
-# 📚 Technologies
-
-- Python 3
-- keyboard
-- socket
-- threading
-- tempfile
-- datetime
-
----
-
-# ⚠️ Limitations
+# 🛡️ Limitations
 
 This project intentionally **does not** implement techniques commonly found in real-world malware.
 
-- Localhost communication only (`127.0.0.1`)
-- No persistence
-- No privilege escalation
-- No process injection
-- No stealth techniques
-- No antivirus evasion
-- No obfuscation
-- No encryption
-- No remote C2 server
-- No external data exfiltration
+* Localhost communication only (`127.0.0.1`)
+* No persistence
+* No process injection
+* No privilege escalation
+* No stealth techniques
+* No antivirus evasion
+* No obfuscation
+* No encryption
+* No remote C2 server
+* No external data exfiltration
 
-These limitations exist to keep the source code understandable, safe to study and focused on educational purposes.
+These limitations are intentional and keep the project focused on learning and transparency.
+
+---
+
+# 📚 Technologies
+
+* Python 3
+* keyboard
+* socket
+* threading
+* tempfile
+* datetime
 
 ---
 
@@ -151,7 +161,5 @@ The author assumes no responsibility for any misuse of this software.
 ---
 
 <p align="center">
-  <strong>Made by arneb</strong><br>
-  <a href="https://github.com/shwdaniel7">github.com/shwdaniel7</a>
+  <b>made by arneb</b>
 </p>
-````
