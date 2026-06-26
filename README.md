@@ -108,7 +108,7 @@ keylogger.py
 Clone the repository.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/python-keylogger.git
+git clone https://github.com/shwdaniel7/python-keylogger.git
 ```
 
 Install dependencies.
